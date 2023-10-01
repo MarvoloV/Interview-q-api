@@ -1,0 +1,16 @@
+export const pk_validate = [
+  "SycL5xTQHuyOE4fA",
+  "keCF2Kdxt97OGDk8",
+  "wyuUzUYpxCcVNbZI",
+  "XUQyEjxOJqkxgoQp",
+  "cXjrIk1zgdD1kBvR",
+  "kxTEx9bMHvYvucf1",
+  "4P5Yhf2UBHlYuHS5",
+  "T9JEWOpgxBD6Aft5",
+  "uwls8igvR8zssMoH",
+  "LVCjjnT5TuRqbyh7",
+  "DE8rkohXDRGJ1mep",
+  "tkxk7657rNUrXlsg",
+  "34CzFdIJMojv73fo",
+  "xzoDLFPpskSHBgSU",
+];

@@ -6,7 +6,7 @@ export const findTokenCard = {
     {
       http: {
         method: "get",
-        path: "tokenCard/findTokenCard/{id}",
+        path: "tokenCard/findTokenCard/",
       },
     },
   ],
