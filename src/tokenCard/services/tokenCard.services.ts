@@ -7,6 +7,7 @@ export const createTokenCard = async (tokenCard: ITokenCard) => {
     const exp = generateExpiredToken();
     tokenCard.token = token;
     tokenCard.exp = exp;
+
     const newTokenCard = await TokenCard.create(tokenCard);
 
     return newTokenCard;

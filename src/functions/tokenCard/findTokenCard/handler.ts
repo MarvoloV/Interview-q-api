@@ -22,12 +22,12 @@ export const main = async (event: APIGatewayProxyEvent, context: Context) => {
   const tokenCard = await findCreditCardByTokenController(token);
   if (!tokenCard) {
     return formatJSONResponseBadRequest({
-      message: "tokenId not found",
+      message: "Token no encontrado",
     });
   }
   if (!isValidToken(tokenCard.exp)) {
     return formatJSONResponseBadRequest({
-      message: "tokenId expired",
+      message: "token expirado",
     });
   }
   return formatJSONResponse({

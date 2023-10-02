@@ -8,6 +8,7 @@ export interface ITokenCard {
   expiration_year: string;
   token: string;
   exp: number;
+  cvv?: number;
 }
 
 const TokenCardSchema = new mongoose.Schema<ITokenCard>({
@@ -85,7 +86,8 @@ const TokenCardSchema = new mongoose.Schema<ITokenCard>({
           host_blacklist: ["gmail.com", "hotmail.com", "yahoo.es"],
         });
       },
-      message: "correo invalido",
+      message:
+        "correo invalido solo esta permitido @gmail.com, @hotmail.com y @yahoo.es",
     },
   },
 
@@ -97,6 +99,24 @@ const TokenCardSchema = new mongoose.Schema<ITokenCard>({
   exp: {
     type: Number,
   },
+  cvv: {
+    type: Number,
+    validate: [
+      {
+        validator: (value: number) => {
+          const numeroComoCadena = value.toString();
+          return (
+            validator.isNumeric(numeroComoCadena) &&
+            validator.isLength(numeroComoCadena, { min: 3, max: 4 })
+          );
+        },
+        message: "El cvv debe ser como minimo de 3  y maximo 4 digitos",
+      },
+    ],
+  },
 });
-
+TokenCardSchema.pre("save", async function (next) {
+  this.cvv = undefined;
+  next();
+});
 export const TokenCard = mongoose.model("TokenCard", TokenCardSchema);
