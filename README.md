@@ -1,5 +1,7 @@
 # Serverless Framework - Lambda + Mongo
 
+![](https://res.cloudinary.com/jam-trading/image/upload/v1696268381/aws.png)
+
 ## Install Dependences
 
 ```
