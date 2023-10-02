@@ -6,7 +6,7 @@ export interface ITokenCard {
   email: string;
   expiration_month: string;
   expiration_year: string;
-  token: string;
+  token?: string;
   exp: number;
   cvv?: number;
 }

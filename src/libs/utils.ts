@@ -27,7 +27,7 @@ export const isValidToken = (exp: number): boolean => {
   return isValid;
 };
 
-export const validarNumero = (numero: number): boolean => {
+export const validarNumero = (numero: number | string): boolean => {
   // Convierte el número a una cadena para contar los dígitos
   const numeroComoCadena = numero.toString();
 

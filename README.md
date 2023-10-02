@@ -75,3 +75,9 @@ header:{
 }
 
 ```
+
+## Testing
+
+```bash
+npm run test
+```
