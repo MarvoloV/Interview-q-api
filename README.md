@@ -56,4 +56,22 @@ endpoints:
   POST - http://localhost:3000/dev/tokenCard/createToken
   GET  - http://localhost:3000/dev/tokenCard/findTokenCard
 
+POST:
+
+body:{
+   "card_number":"4557880821444944",
+    "expiration_month":"11",
+    "expiration_year":"2023",
+    "email":"jorge2ad0812@gmail.com",
+    "cvc":"1234"
+}
+header:{
+  Authorization: "pk_test_4P5Yhf2UBHlYuHS5"
+}
+
+GET:
+header:{
+  Authorization: "${tokengenerate}"
+}
+
 ```
